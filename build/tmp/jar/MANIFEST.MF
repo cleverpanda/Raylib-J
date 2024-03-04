@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Implementation-Title: Raylib-J
+Implementation-Version: 0.5
+

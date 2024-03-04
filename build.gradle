@@ -1,0 +1,62 @@
+
+plugins {
+    // Apply the java-library plugin for API and implementation separation.
+    id 'java-library'
+}
+
+group = 'com.raylib'
+version = "0.5"
+project.ext.lwjglVersion = "3.3.2"
+project.ext.jomlVersion = "1.10.5"
+project.ext.annotationsVersion = "24.0.1"
+project.ext.javamp3Version = "1.0.1"
+
+repositories {
+    // Use Maven Central for resolving dependencies.
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // This dependency is exported to consumers, that is to say found on their compile classpath.
+    implementation files("libs/gltf-j.jar")
+
+
+    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+    implementation "fr.delthas:javamp3:${javamp3Version}"
+    implementation "org.jetbrains:annotations:${annotationsVersion}"
+    implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+
+    implementation "org.lwjgl:lwjgl"
+    implementation "org.lwjgl:lwjgl-glfw"
+    implementation "org.lwjgl:lwjgl-openal"
+    implementation "org.lwjgl:lwjgl-opengl"
+    implementation "org.lwjgl:lwjgl-opengles"
+    implementation "org.lwjgl:lwjgl-par"
+    implementation "org.lwjgl:lwjgl-stb"
+
+}
+
+// Apply a specific Java toolchain to ease working on different environments.
+java {
+    withSourcesJar()
+    withJavadocJar()
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes('Implementation-Title': project.name,
+                'Implementation-Version': project.version)
+    }
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
