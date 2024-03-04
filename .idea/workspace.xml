@@ -13,9 +13,199 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7118e07-dbb8-4d33-b477-43ae871d21a7" name="Default Changelist" comment="0.4 wip">
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/gltf-j.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Raymath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/raylib/java/raymath/Raymath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/NPatchInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/raylib/java/textures/NPatchInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/VoxFileParser-0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/annotations-24.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/assimp_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/build.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/glfw_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/gltf-j.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/javamp3-1.0.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/khronos_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-assimp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-glfw.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-openal.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-opengles.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-par.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-release-custom-zip.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-linux-arm32.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-linux-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-linux.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-macos-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-macos.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-windows-arm64.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-windows-x86.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-natives-windows.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl-stb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/lwjgl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/openal_soft_license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/native/raylib-j_lwjgl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/Raylib.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/AutomationEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/Callbacks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/Time.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/Window.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/input/Gamepad.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/input/Input.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/input/Keyboard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/input/Mouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/input/Touch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/rCore.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/ray/Ray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/ray/RayCollision.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/rcamera/Camera2D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/rcamera/Camera3D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/core/rcamera/CameraData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/Easings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/physac/Matrix2x2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/physac/Physac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/physac/PhysicsBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/physac/PhysicsManifoldData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/physac/PhysicsShape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/extras/physac/PhysicsVertexData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/BoneInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/BoundingBox.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/Material.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/MaterialMap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/Mesh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/ModelAnimation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/Transform.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMAnim.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMHeader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMJoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMMesh.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMPose.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMTriangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMVertexArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/iqm/IQMVertexDataType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/models/rModels.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raudioal/AudioStream.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raudioal/Music.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raudioal/Sound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raudioal/Wave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raudioal/rAudioAL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Float16.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Float3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Matrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Quaternion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Raymath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Size.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Vector2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Vector3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/raymath/Vector4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/GL_11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/GL_33.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/RLGL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/data/ExtSupported.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/data/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/data/rlglData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/rlDrawCall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/rlRenderBatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/rlVertexBuffer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/shader/Shader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/vr/VR.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/vr/VrDeviceInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/rlgl/vr/VrStereoConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/shapes/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/shapes/rShapes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/text/Font.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/text/GlyphInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/text/rText.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/Image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/NPatchInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/RenderTexture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/Texture2D.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/TextureCubemap.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/textures/rTextures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/utils/FileIO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/utils/OBJLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/utils/Tracelog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/utils/VoxLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/raylib/java/utils/rLights.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +214,29 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/raylib-j">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -56,7 +269,7 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="1wXkYpvloJvuv3LgUyZeItG9r7r" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -68,8 +281,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/creedvi/Documents/Java/Raylib-J/tests/com/raylib/java/resources",
+    "last_opened_file_path": "C:/Users/Bryce/Documents/Raylib-J/build.gradle",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -105,7 +319,7 @@
       <recent name="com.raylib.java.Audio" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ttf">
+  <component name="RunManager" selected="Gradle.Raylib-J [build]">
     <configuration name="AudioTest" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.raylib.java.Audio.AudioTest" />
       <module name="Raylib-J" />
@@ -113,19 +327,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.raylib.java.lwjgl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Core2DCameraMouseZoom" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.raylib.java.core.Core2DCameraMouseZoom" />
-      <module name="Raylib-J" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.raylib.java.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,19 +381,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.raylib.java.lwjgl.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MonitorProperties" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.raylib.java.core.MonitorProperties" />
-      <module name="Raylib-J" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.raylib.java.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -325,6 +513,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Raylib-J [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Raylib-J [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="JAR_DEV-0.5" type="JarApplication">
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Raylib-J_DEV-0.5/Raylib-J_DEV-0.5.jar" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -347,20 +579,20 @@
       <item itemvalue="Application.sdf" />
       <item itemvalue="Application.spritef" />
       <item itemvalue="Application.ttf" />
-      <item itemvalue="Application.Core2DCameraMouseZoom" />
       <item itemvalue="Application.IQMAnimation" />
       <item itemvalue="Application.InputGamepad" />
-      <item itemvalue="Application.MonitorProperties" />
       <item itemvalue="Application.WindowIcon" />
+      <item itemvalue="Gradle.Raylib-J [build]" />
+      <item itemvalue="Gradle.Raylib-J [jar]" />
       <item itemvalue="JAR Application.JAR_DEV-0.5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Raylib-J [build]" />
+        <item itemvalue="Gradle.Raylib-J [jar]" />
         <item itemvalue="Application.WindowIcon" />
         <item itemvalue="Application.InputGamepad" />
         <item itemvalue="Application.IQMAnimation" />
-        <item itemvalue="Application.Core2DCameraMouseZoom" />
-        <item itemvalue="Application.MonitorProperties" />
       </list>
     </recent_temporary>
   </component>
@@ -379,6 +611,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628612372130</updated>
+      <workItem from="1709592558557" duration="64000" />
+      <workItem from="1709592634367" duration="333000" />
     </task>
     <task id="LOCAL-00001" summary="Offline updates number 3. Textures working, module complete.">
       <created>1630992316815</created>
