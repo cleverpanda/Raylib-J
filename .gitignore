@@ -1,9 +1,17 @@
 *.log
 *.dmp
 *.iml
+
 .idea/
 logo/rlj_old.png
 out/
 tests/
+
 META-INF/
 *.txt
+
+# Ignore Gradle project-specific cache directory
+.gradle/
+
+# Ignore Gradle build output directory
+build/
