@@ -6,9 +6,9 @@ import static com.raylib.Config.*;
 import static com.raylib.Config.ConfigFlag.*;
 import static com.raylib.core.rCore.getWindow;
 import static com.raylib.utils.Tracelog.Tracelog;
-import static com.raylib.utils.Tracelog.TracelogType.*;
+import static com.raylib.utils.Tracelog.TracelogType.LOG_DEBUG;
+import static com.raylib.utils.Tracelog.TracelogType.LOG_WARNING;
 import static org.lwjgl.glfw.GLFW.*;
-import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
 
 public class Callbacks{
 
@@ -24,17 +24,17 @@ public class Callbacks{
         public void invoke(long window, int width, int height){
             Tracelog(LOG_DEBUG, "Window Size Callback Triggered");
             rCore.SetupViewport(width, height);    // Reset viewport and projection matrix for new size
-            rCore.getWindow().currentFbo.setWidth(width);
-            rCore.getWindow().currentFbo.setHeight(height);
-            rCore.getWindow().setResizedLastFrame(true);
+            getWindow().currentFbo.setWidth(width);
+            getWindow().currentFbo.setHeight(height);
+            getWindow().setResizedLastFrame(true);
 
             if(rCore.IsWindowFullscreen()){
                 return;
             }
 
             // Set current screen size
-            rCore.getWindow().screen.setWidth(width);
-            rCore.getWindow().screen.setHeight(height);
+            getWindow().screen.setWidth(width);
+            getWindow().screen.setHeight(height);
             // NOTE: Postprocessing texture is not scaled to new size
         }
     }
@@ -44,10 +44,10 @@ public class Callbacks{
         public void invoke(long window, boolean iconified){
             Tracelog(LOG_DEBUG, "Iconify Callback Triggered");
             if (iconified){
-                rCore.getWindow().flags |= FLAG_WINDOW_MINIMIZED;  // The window was iconified
+                getWindow().flags |= FLAG_WINDOW_MINIMIZED;  // The window was iconified
             }
             else{
-                rCore.getWindow().flags &= ~FLAG_WINDOW_MINIMIZED;           // The window was restored
+                getWindow().flags &= ~FLAG_WINDOW_MINIMIZED;           // The window was restored
             }
         }
     }
@@ -56,10 +56,10 @@ public class Callbacks{
         @Override
         public void invoke(long window, boolean maximized){
             if (maximized){
-                rCore.getWindow().flags |= FLAG_WINDOW_MAXIMIZED;  // The window was maximized
+                getWindow().flags |= FLAG_WINDOW_MAXIMIZED;  // The window was maximized
             }
             else{
-                rCore.getWindow().flags &= ~FLAG_WINDOW_MAXIMIZED;           // The window was restored
+                getWindow().flags &= ~FLAG_WINDOW_MAXIMIZED;           // The window was restored
             }
         }
     }
@@ -69,10 +69,10 @@ public class Callbacks{
         public void invoke(long window, boolean focused){
             Tracelog(LOG_DEBUG, "Focus Callback Triggered");
             if (focused){
-                rCore.getWindow().flags &= ~FLAG_WINDOW_UNFOCUSED;   // The window was focused
+                getWindow().flags &= ~FLAG_WINDOW_UNFOCUSED;   // The window was focused
             }
             else{
-                rCore.getWindow().flags |= FLAG_WINDOW_UNFOCUSED;            // The window lost focus
+                getWindow().flags |= FLAG_WINDOW_UNFOCUSED;            // The window lost focus
             }
         }
     }
@@ -93,7 +93,7 @@ public class Callbacks{
 
             // Check the exit key to set close window
             if ((key == rCore.getInput().keyboard.exitKey) && (action == GLFW_PRESS)){
-                glfwSetWindowShouldClose(rCore.getWindow().handle, true);
+                glfwSetWindowShouldClose(getWindow().handle, true);
             }
 
             if(SUPPORT_SCREEN_CAPTURE){
@@ -193,14 +193,14 @@ public class Callbacks{
             rCore.ClearDroppedFiles();
             String[] paths = new String[(int) names];
 
-            rCore.getWindow().setDropFilesPath(new String[count]);
+            getWindow().setDropFilesPath(new String[count]);
 
             for (int j = 0; j < count; j++){
-                rCore.getWindow().getDropFilesPath()[count] = String.valueOf(MAX_FILEPATH_LENGTH);
+                getWindow().getDropFilesPath()[count] = String.valueOf(MAX_FILEPATH_LENGTH);
                 paths[j] = String.valueOf(getWindow().dropFilesPath[j]);
             }
 
-            rCore.getWindow().setDropFilesCount(count);
+            getWindow().setDropFilesCount(count);
         }
     }
 }

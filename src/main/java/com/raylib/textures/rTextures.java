@@ -10,7 +10,6 @@ import com.raylib.shapes.Rectangle;
 import com.raylib.text.Font;
 import com.raylib.text.rText;
 import com.raylib.utils.FileIO;
-import com.raylib.utils.Tracelog;
 import org.lwjgl.PointerBuffer;
 import org.lwjgl.stb.STBImage;
 import org.lwjgl.stb.STBImageWrite;
@@ -189,9 +188,9 @@ public class rTextures{
 
         if (SUPPORT_FILEFORMAT_PNG || SUPPORT_FILEFORMAT_BMP || SUPPORT_FILEFORMAT_TGA || SUPPORT_FILEFORMAT_JPG ||
                 SUPPORT_FILEFORMAT_GIF || SUPPORT_FILEFORMAT_PIC || SUPPORT_FILEFORMAT_PSD) {
-            if (fileType.equals(".png") || fileType.equals(".bmp") || fileType.equals(".tga") ||
-                    (fileType.equals(".jpeg") || fileType.equals(".jpg")) || fileType.equals(".gif") ||
-                    fileType.equals(".pic") || fileType.equals(".psd")) {
+            if (fileType.contains(".png") || fileType.contains(".bmp") || fileType.contains(".tga") ||
+                    (fileType.contains(".jpeg") || fileType.contains(".jpg")) || fileType.contains(".gif") ||
+                    fileType.contains(".pic") || fileType.contains(".psd")) {
 
                 if (fileData != null) {
                     int comp = 0;
@@ -241,7 +240,7 @@ public class rTextures{
             }
         }
         else if(SUPPORT_FILEFORMAT_HDR) {
-            if (fileType.equals(".hdr")) {
+            if (fileType.contains(".hdr")) {
                 if (fileData != null) {
                     int comp = 0;
                     try (MemoryStack stack = MemoryStack.stackPush()) {
@@ -1041,7 +1040,7 @@ public class rTextures{
             Tracelog(LOG_INFO, "IMAGE: rText scaled by factor: " + scaleFactor);
 
             // Using nearest-neighbor scaling algorithm for default font
-            if (font.getTexture().getId() == rText.GetFontDefault().getTexture().getId()) {
+            if (font.getTexture().getId() == GetFontDefault().getTexture().getId()) {
                 ImageResizeNN(imText, (int) (imSize.x * scaleFactor), (int) (imSize.y * scaleFactor));
             }
             else{
@@ -1434,7 +1433,7 @@ public class rTextures{
                 mipHeight = 1;
             }
 
-            Tracelog.Tracelog("IMAGE: Next mipmap level: " + mipWidth + " x " + mipHeight + " - current size " + mipSize);
+            Tracelog("IMAGE: Next mipmap level: " + mipWidth + " x " + mipHeight + " - current size " + mipSize);
 
             mipCount++;
             mipSize += GetPixelDataSize(mipWidth, mipHeight, image.format);       // Add mipmap size (in bytes)
@@ -1459,7 +1458,7 @@ public class rTextures{
             Image imCopy = ImageCopy(image);
 
             for (int i = 1; i < mipCount; i++) {
-                Tracelog.Tracelog("IMAGE: Generating mipmap level: " + i + " (" + mipWidth + " x " + mipHeight + ")" +
+                Tracelog("IMAGE: Generating mipmap level: " + i + " (" + mipWidth + " x " + mipHeight + ")" +
                                   " - size: " + mipSize + " - offset: " + nextmip);
 
                 ImageResize(imCopy, mipWidth, mipHeight);  // Uses internally Mitchell cubic downscale filter
@@ -2694,7 +2693,7 @@ public class rTextures{
         Rectangle srcRec = new Rectangle(0.0f, 0.0f, (float) imText.width, (float) imText.height);
         Rectangle dstRec = new Rectangle(position.x, position.y, (float) imText.width, (float) imText.height);
 
-        ImageDraw(dst, imText, srcRec, dstRec, Color.WHITE);
+        ImageDraw(dst, imText, srcRec, dstRec, WHITE);
 
         UnloadImage(imText);
     }
@@ -2820,10 +2819,10 @@ public class rTextures{
 
             for (int i = 0; i < 6; i++) {
                 ImageDraw(faces, image, faceRecs[i], new Rectangle(0, (float) size * i, (float) size, (float) size),
-                          Color.WHITE);
+                        WHITE);
             }
 
-            cubemap.id = RLGL.rlLoadTextureCubemap(faces.getData(), size, faces.format);
+            cubemap.id = rlLoadTextureCubemap(faces.getData(), size, faces.format);
             if (cubemap.id == 0) {
                 Tracelog(LOG_WARNING, "IMAGE: Failed to load cubemap image");
             }

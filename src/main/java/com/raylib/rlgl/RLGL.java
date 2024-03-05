@@ -20,7 +20,7 @@ import static com.raylib.rlgl.RLGL.rlFramebufferAttachTextureType.*;
 import static com.raylib.rlgl.RLGL.rlGlVersion.*;
 import static com.raylib.rlgl.RLGL.rlPixelFormat.*;
 import static com.raylib.rlgl.RLGL.rlShaderLocationIndex.*;
-import static com.raylib.utils.Tracelog.Tracelog;
+import static com.raylib.utils.Tracelog.*;
 import static com.raylib.utils.Tracelog.TracelogType.LOG_INFO;
 import static com.raylib.utils.Tracelog.TracelogType.LOG_WARNING;
 import static org.lwjgl.opengl.GL11.*;

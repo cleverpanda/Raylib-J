@@ -207,7 +207,7 @@ public class rCore{
             rText.UnloadFontDefault();
         }
 
-        RLGL.rlglClose();                // De-init rlgl
+        rlglClose();                // De-init rlgl
 
         glfwSetWindowShouldClose(window.handle, true);
         glfwFreeCallbacks(window.handle);
@@ -858,8 +858,8 @@ public class rCore{
      * @param color Color to fill the background
      */
     public void ClearBackground(Color color){
-        RLGL.rlClearColor(color.getR(), color.getG(), color.getB(), color.getA());   // Set clear color
-        RLGL.rlClearScreenBuffers();                             // Clear current framebuffers
+        rlClearColor(color.getR(), color.getG(), color.getB(), color.getA());   // Set clear color
+        rlClearScreenBuffers();                             // Clear current framebuffers
     }
 
     /**
@@ -993,30 +993,30 @@ public class rCore{
     public void BeginMode2D(Camera2D camera){
         rlgl.rlDrawRenderBatchActive();                         // Draw Buffers (Only OpenGL 3+ and ES2)
 
-        RLGL.rlLoadIdentity();                   // Reset current matrix (modelview)
+        rlLoadIdentity();                   // Reset current matrix (modelview)
 
         // Apply 2d camera transformation to modelview
-        RLGL.rlMultMatrixf(MatrixToFloat(GetCameraMatrix2D(camera)));
+        rlMultMatrixf(MatrixToFloat(GetCameraMatrix2D(camera)));
 
         // Apply screen scaling if required
-        RLGL.rlMultMatrixf(MatrixToFloat(window.getScreenScale()));
+        rlMultMatrixf(MatrixToFloat(window.getScreenScale()));
     }
 
     // Ends 2D mode with custom camera
     public void EndMode2D(){
         rlgl.rlDrawRenderBatchActive();                         // Draw Buffers (Only OpenGL 3+ and ES2)
 
-        RLGL.rlLoadIdentity();                   // Reset current matrix (modelview)
-        RLGL.rlMultMatrixf(MatrixToFloat(window.getScreenScale())); // Apply screen scaling if required
+        rlLoadIdentity();                   // Reset current matrix (modelview)
+        rlMultMatrixf(MatrixToFloat(window.getScreenScale())); // Apply screen scaling if required
     }
 
     // Initializes 3D mode with custom camera (3D)
     public void BeginMode3D(Camera3D camera){
         rlgl.rlDrawRenderBatchActive();                         // Draw Buffers (Only OpenGL 3+ and ES2)
 
-        RLGL.rlMatrixMode(RLGL.RL_PROJECTION);        // Switch to projection matrix
-        RLGL.rlPushMatrix();                     // Save previous matrix, which contains the settings for the 2d ortho projection
-        RLGL.rlLoadIdentity();                   // Reset current matrix (projection)
+        rlMatrixMode(RL_PROJECTION);        // Switch to projection matrix
+        rlPushMatrix();                     // Save previous matrix, which contains the settings for the 2d ortho projection
+        rlLoadIdentity();                   // Reset current matrix (projection)
 
         float aspect = (float) window.currentFbo.getWidth() / (float) window.currentFbo.getHeight();
 
@@ -1025,7 +1025,7 @@ public class rCore{
             double top = RL_CULL_DISTANCE_NEAR * Math.tan(camera.getFovy() * 0.5 * DEG2RAD);
             double right = top * aspect;
 
-            RLGL.rlFrustum(-right, right, -top, top, RL_CULL_DISTANCE_NEAR, RL_CULL_DISTANCE_FAR);
+            rlFrustum(-right, right, -top, top, RL_CULL_DISTANCE_NEAR, RL_CULL_DISTANCE_FAR);
 
         }
         else if (camera.projection == CAMERA_ORTHOGRAPHIC){
@@ -1033,17 +1033,17 @@ public class rCore{
             double top = camera.getFovy() / 2.0;
             double right = top * aspect;
 
-            RLGL.rlOrtho(-right, right, -top, top, RL_CULL_DISTANCE_NEAR, RL_CULL_DISTANCE_FAR);
+            rlOrtho(-right, right, -top, top, RL_CULL_DISTANCE_NEAR, RL_CULL_DISTANCE_FAR);
         }
 
         // NOTE: zNear and zFar values are important when computing depth buffer values
 
-        RLGL.rlMatrixMode(RLGL.RL_MODELVIEW);         // Switch back to modelview matrix
-        RLGL.rlLoadIdentity();                   // Reset current matrix (modelview)
+        rlMatrixMode(RL_MODELVIEW);         // Switch back to modelview matrix
+        rlLoadIdentity();                   // Reset current matrix (modelview)
 
         // Setup rCamera view
         Matrix matView = MatrixLookAt(camera.getPosition(), camera.getTarget(), camera.getUp());
-        RLGL.rlMultMatrixf(MatrixToFloat(matView));      // Multiply modelview matrix by view matrix (camera)
+        rlMultMatrixf(MatrixToFloat(matView));      // Multiply modelview matrix by view matrix (camera)
         rlgl.rlEnableDepthTest();                // Enable DEPTH_TEST for 3D
     }
 
@@ -1051,13 +1051,13 @@ public class rCore{
     public void EndMode3D(){
         rlgl.rlDrawRenderBatchActive();                         // Process internal buffers (update + draw)
 
-        RLGL.rlMatrixMode(RLGL.RL_PROJECTION);        // Switch to projection matrix
-        RLGL.rlPopMatrix();                      // Restore previous matrix (projection) from matrix stack
+        rlMatrixMode(RL_PROJECTION);        // Switch to projection matrix
+        rlPopMatrix();                      // Restore previous matrix (projection) from matrix stack
 
-        RLGL.rlMatrixMode(RLGL.RL_MODELVIEW);         // Switch back to modelview matrix
-        RLGL.rlLoadIdentity();                   // Reset current matrix (modelview)
+        rlMatrixMode(RL_MODELVIEW);         // Switch back to modelview matrix
+        rlLoadIdentity();                   // Reset current matrix (modelview)
 
-        RLGL.rlMultMatrixf(MatrixToFloat(window.getScreenScale())); // Apply screen scaling if required
+        rlMultMatrixf(MatrixToFloat(window.getScreenScale())); // Apply screen scaling if required
 
         rlgl.rlDisableDepthTest();               // Disable DEPTH_TEST for 2D
     }
@@ -1066,20 +1066,20 @@ public class rCore{
     public void BeginTextureMode(RenderTexture target){
         rlgl.rlDrawRenderBatchActive();                         // Draw Buffers (Only OpenGL 3+ and ES2)
 
-        RLGL.rlEnableFramebuffer(target.getId());     // Enable render target
+        rlEnableFramebuffer(target.getId());     // Enable render target
 
         // Set viewport to framebuffer size
-        RLGL.rlViewport(0, 0, target.texture.width, target.texture.height);
+        rlViewport(0, 0, target.texture.width, target.texture.height);
 
-        RLGL.rlMatrixMode(RLGL.RL_PROJECTION);        // Switch to projection matrix
-        RLGL.rlLoadIdentity();                   // Reset current matrix (projection)
+        rlMatrixMode(RL_PROJECTION);        // Switch to projection matrix
+        rlLoadIdentity();                   // Reset current matrix (projection)
 
         // Set orthographic projection to current framebuffer size
         // NOTE: Configured top-left corner as (0, 0)
-        RLGL.rlOrtho(0, target.texture.width, target.texture.height, 0, 0.0f, 1.0f);
+        rlOrtho(0, target.texture.width, target.texture.height, 0, 0.0f, 1.0f);
 
-        RLGL.rlMatrixMode(RLGL.RL_MODELVIEW);         // Switch back to modelview matrix
-        RLGL.rlLoadIdentity();                   // Reset current matrix (modelview)
+        rlMatrixMode(RL_MODELVIEW);         // Switch back to modelview matrix
+        rlLoadIdentity();                   // Reset current matrix (modelview)
 
         //rlScalef(0.0f, -1.0f, 0.0f);      // Flip Y-drawing (?)
 
@@ -1093,7 +1093,7 @@ public class rCore{
     public void EndTextureMode(){
         rlgl.rlDrawRenderBatchActive();                 // Draw Buffers (Only OpenGL 3+ and ES2)
 
-        RLGL.rlDisableFramebuffer();     // Disable render target (fbo)
+        rlDisableFramebuffer();     // Disable render target (fbo)
 
         // Set viewport to default framebuffer size
         SetupViewport(window.render.width, window.render.height);
@@ -1144,8 +1144,8 @@ public class rCore{
         rlgl.rlEnableStereoRenderer();
 
         // Set stereo render matrices
-        RLGL.rlSetMatrixProjectionStereo(config.projection[0], config.projection[1]);
-        RLGL.rlSetMatrixViewOffsetStereo(config.viewOffset[0], config.viewOffset[1]);
+        rlSetMatrixProjectionStereo(config.projection[0], config.projection[1]);
+        rlSetMatrixViewOffsetStereo(config.viewOffset[0], config.viewOffset[1]);
 
     }
 
@@ -1158,7 +1158,7 @@ public class rCore{
     public VrStereoConfig LoadVrStereoConfig(VrDeviceInfo device){
         VrStereoConfig config = new VrStereoConfig();
 
-        if (RLGL.GRAPHICS_API_OPENGL_33 || RLGL.GRAPHICS_API_OPENGL_ES2){
+        if (GRAPHICS_API_OPENGL_33 || GRAPHICS_API_OPENGL_ES2){
             // Compute aspect ratio
             float aspect = ((float) device.gethResolution() * 0.5f) / (float) device.getvResolution();
 
@@ -1263,7 +1263,7 @@ public class rCore{
     // Load shader from code strings and bind default locations
     public Shader LoadShaderFromMemory(String vsCode, String fsCode){
         Shader shader = new Shader();
-        shader.locs = new int[RLGL.MAX_SHADER_LOCATIONS];
+        shader.locs = new int[MAX_SHADER_LOCATIONS];
 
         // NOTE: All locations must be reseted to -1 (no location)
         for (int i = 0; i < RL_MAX_SHADER_LOCATIONS; i++) shader.locs[i] = -1;
@@ -1317,7 +1317,7 @@ public class rCore{
 
     // Get shader uniform location
     public static int GetShaderLocation(Shader shader, String uniformName){
-        return RLGL.rlGetLocationUniform(shader.getId(), uniformName);
+        return rlGetLocationUniform(shader.getId(), uniformName);
     }
 
     // Get shader attribute location
@@ -1332,8 +1332,8 @@ public class rCore{
 
     // Set shader uniform value vector
     public static void SetShaderValueV(Shader shader, int locIndex, float[] value, int uniformType, int count){
-        RLGL.rlEnableShader(shader.getId());
-        RLGL.rlSetUniform(locIndex, value, uniformType, count);
+        rlEnableShader(shader.getId());
+        rlSetUniform(locIndex, value, uniformType, count);
         //rlDisableShader();      // Avoid reseting current shader program, in case other uniforms are set
     }
 
@@ -1589,7 +1589,7 @@ public class rCore{
     // NOTE: This function could work in any platform but some platforms: PLATFORM_ANDROID and PLATFORM_WEB
     // have their own internal file-systems, to dowload image to user file-system some additional mechanism is required
     public static void TakeScreenshot(String fileName){
-        short[] imgData = RLGL.rlReadScreenPixels(window.render.width, window.render.height);
+        short[] imgData = rlReadScreenPixels(window.render.width, window.render.height);
         byte[] dataB = new byte[imgData.length];
         IntStream.range(0, dataB.length).forEach(i -> dataB[i] = (byte) imgData[i]);
         Image image = new Image(dataB, window.render.width, window.render.height, 1,
@@ -2452,11 +2452,11 @@ public class rCore{
 
         // Check selection OpenGL version
 
-        if (RLGL.rlGetVersion() == rlGlVersion.OPENGL_21){
+        if (rlGetVersion() == rlGlVersion.OPENGL_21){
             glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);          // Choose OpenGL major version (just hint)
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);          // Choose OpenGL minor version (just hint)
         }
-        else if (RLGL.rlGetVersion() == rlGlVersion.OPENGL_33){
+        else if (rlGetVersion() == rlGlVersion.OPENGL_33){
             glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);          // Choose OpenGL major version (just hint)
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);          // Choose OpenGL minor version (just hint)
             glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // Profiles Hint: Only 3.3 and above!
@@ -2468,7 +2468,7 @@ public class rCore{
             }
             glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
         }
-        else if (RLGL.rlGetVersion() == rlGlVersion.OPENGL_ES_20){
+        else if (rlGetVersion() == rlGlVersion.OPENGL_ES_20){
             glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
             glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
             glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API);
@@ -2610,11 +2610,11 @@ public class rCore{
         // NOTE: GLFW loader function is passed as parameter
         //TODO - rlLoadExtensions uses GLAD.
         //rlLoadExtensions(glfwGetProcAddress());
-        RLGL.rlLoadExtensions();
+        rlLoadExtensions();
 
         // Initialize OpenGL context (states and resources)
         // NOTE: window.screen.getWidth() and window.screen.getHeight() not used, just stored as globals in rlgl
-        RLGL.rlglInit(window.screen.getWidth(), window.screen.getHeight());
+        rlglInit(window.screen.getWidth(), window.screen.getHeight());
 
         int fbWidth = window.render.getWidth();
         int fbHeight = window.render.getHeight();
@@ -2650,19 +2650,19 @@ public class rCore{
         // Set viewport width and height
         // NOTE: We consider render size and offset in case black bars are required and
         // render area does not match full display area (this situation is only applicable on fullscreen mode)
-        RLGL.rlViewport((int) window.renderOffset.x / 2, (int) window.renderOffset.y / 2,
+        rlViewport((int) window.renderOffset.x / 2, (int) window.renderOffset.y / 2,
                         (int) (window.render.getWidth() - window.renderOffset.getX()),
                         (int) (window.render.getHeight() - window.renderOffset.getY()));
 
-        RLGL.rlMatrixMode(RLGL.RL_PROJECTION);        // Switch to projection matrix
-        RLGL.rlLoadIdentity();                   // Reset current matrix (projection)
+        rlMatrixMode(RL_PROJECTION);        // Switch to projection matrix
+        rlLoadIdentity();                   // Reset current matrix (projection)
 
         // Set orthographic projection to current framebuffer size
         // NOTE: Configured top-left corner as (0, 0)
-        RLGL.rlOrtho(0, window.render.getWidth(), window.render.getHeight(), 0, 0.0f, 1.0f);
+        rlOrtho(0, window.render.getWidth(), window.render.getHeight(), 0, 0.0f, 1.0f);
 
-        RLGL.rlMatrixMode(RLGL.RL_MODELVIEW);         // Switch back to modelview matrix
-        RLGL.rlLoadIdentity();                   // Reset current matrix (modelview)
+        rlMatrixMode(RL_MODELVIEW);         // Switch back to modelview matrix
+        rlLoadIdentity();                   // Reset current matrix (modelview)
     }
 
     // Compute framebuffer size relative to screen size and display size

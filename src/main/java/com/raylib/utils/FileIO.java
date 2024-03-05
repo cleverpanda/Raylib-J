@@ -21,17 +21,23 @@ public class FileIO{
         if (SUPPORT_STANDARD_FILEIO){
 
             InputStream inputStream;
+            //TODO what?
+            //this change makes work with Gradle filepaths
             if (fileName.contains("/")) {
-                inputStream = FileIO.class.getResourceAsStream(fileName.substring(fileName.lastIndexOf('/')));
+                inputStream = FileIO.class.getResourceAsStream(fileName);
+                System.out.println("stream 1: "+fileName.substring(fileName.lastIndexOf('/')));
             }
             else {
                 inputStream = FileIO.class.getResourceAsStream("/"+fileName);
+                System.out.println("stream 2: "+"/"+fileName);
             }
+            /*
             if(inputStream == null) {
                 String ext = fileName.substring(fileName.lastIndexOf('.')).toUpperCase();
                 inputStream = getFileFromResourceAsStream(fileName.substring(0, fileName.lastIndexOf('.'))+ext);
-            }
-
+                System.out.println("stream 3: "+fileName.substring(0, fileName.lastIndexOf('.'))+ext);
+            }*/
+            //inputStream = FileIO.class.getResourceAsStream("/assets/cyberpunk_street_background.png");
             if (inputStream != null) {
                 try {
                     int read;

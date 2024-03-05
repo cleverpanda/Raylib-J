@@ -24,7 +24,7 @@ import static com.raylib.rlgl.RLGL.*;
 import static com.raylib.rlgl.RLGL.rlTextureFilterMode.RL_TEXTURE_FILTER_POINT;
 import static com.raylib.text.rText.FontType.*;
 import static com.raylib.textures.rTextures.*;
-import static com.raylib.utils.Tracelog.Tracelog;
+import static com.raylib.utils.Tracelog.*;
 import static com.raylib.utils.Tracelog.TracelogType.LOG_INFO;
 import static com.raylib.utils.Tracelog.TracelogType.LOG_WARNING;
 
